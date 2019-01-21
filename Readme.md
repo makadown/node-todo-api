@@ -2,8 +2,7 @@
 
 Ejercicio de REST Apis con NodeJS & Mongoose. Instruido por Andrew Mead como parte del curso: https://www.udemy.com/the-complete-nodejs-developer-course-2.
 
-
-### Notas:
+## Notas:
 
 En package.json hay diferencias, pa que se pongan truchas.
 
@@ -50,3 +49,13 @@ De modo que para el mismo objeto mencionado arriba, puedo enviar a PATCH un obje
 y reemplazara solamente el atributo email del objeto en lugar de todo el objeto.
 
 De todas formas, el uso de PATCH o PUT no deja de ser un tema interesante de discusión debido a que pueden existir casos en que sea mejor utilizar PUT.
+
+### Publicando en Heroku
+
+Al publicar este proyecto en Heroku, el add-on de mLab nos proporciona una variable de entorno muy útil:
+
+
+MONGODB_URI
+
+
+Más info en : https://devcenter.heroku.com/articles/mongolab#getting-your-connection-uri
