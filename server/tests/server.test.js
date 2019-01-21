@@ -14,7 +14,8 @@ const todos = [{
 }];
 
 beforeEach((done) => {
-  Todo.remove({}).then(() => {
+  // remove() function is deprecated
+  Todo.deleteMany({}).then(() => {
     return Todo.insertMany(todos);
   }).then(() => done());
 });

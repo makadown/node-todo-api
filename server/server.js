@@ -53,4 +53,5 @@ app.listen(3000, () => {
   console.log('Started on port 3000');
 });
 
+// Hago esto para permitirme hacer pruebas
 module.exports = {app};
