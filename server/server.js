@@ -10,6 +10,7 @@ var app = express();
 
 app.use(bodyParser.json());
 
+// Prueba con postman en body RAW con formato JSON
 app.post('/todos', (req, res) => {
   var todo = new Todo({
     text: req.body.text
