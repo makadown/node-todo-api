@@ -73,6 +73,8 @@ app.delete('/todos/:id', (req, res) => {
 
 app.patch('/todos/:id', (req, res) => {
   var id = req.params.id;
+  /* By using pick, Mongoose will ignore any fields that 
+    aren't specified in the schema so you don't really need it. */
   var body = _.pick(req.body, ['text', 'completed']);
 
   if (!ObjectID.isValid(id)) {

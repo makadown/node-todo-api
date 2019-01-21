@@ -24,3 +24,29 @@ En Linux:
     "test-watch": "nodemon --exec 'npm test'"
   },
 ```
+
+### Porqué se usa PATCH en lugar de PUT?
+
+Por lo general PUT se usa cuando se reemplaza una entidad completa. Por ejemplo, digamos que tenemos un objeto del siguiente tipo:
+```
+{
+    email: 'test@email.com',
+    name: 'John Doe',
+    age: 25,
+}
+```
+
+Cuando usamos PUT, establecemos que reemplazaremos la entidad completa, de modo que se DEBE proveer el objeto con absolutamente los campos email, name, and age al usar PUT.
+
+
+Sin embargo, con PATCH se puede reemplazar solamente ciertos atributos en una entidad.
+
+De modo que para el mismo objeto mencionado arriba, puedo enviar a PATCH un objeto como el siguiente:
+```
+{
+    email: test2@email.com
+}
+```
+y reemplazara solamente el atributo email del objeto en lugar de todo el objeto.
+
+De todas formas, el uso de PATCH o PUT no deja de ser un tema interesante de discusión debido a que pueden existir casos en que sea mejor utilizar PUT.
